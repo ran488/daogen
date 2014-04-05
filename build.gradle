@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = "org.redneck.persistinator.gui.DaoGeneratorGui"
+
+repositories { mavenCentral() }
+
+dependencies {
+	// Oracle driver not available in public repos - you'll need to install local or attach to private repo
+	//compile 'com.oracle:ojdbc6_g:11.1.0.7.0'
+	compile 'org.apache.velocity:velocity:1.7'
+	compile 'net.java.dev.swing-layout:swing-layout:1.0.2'
+	testCompile 'junit:junit:4.+'
+}
